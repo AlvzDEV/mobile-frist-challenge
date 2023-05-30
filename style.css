@@ -1,0 +1,166 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --ff-heading: 'Staatliches', sans-serif;
+  --ff-texting: 'Palanquin', sans-serif;
+  --fs-body: 2.0rem;
+  font-size: 62.5%;
+
+  --hue: 250;
+
+  --bg-header: hsl(var(--hue), 17%, 62%);
+  --bg-primary: hsl(var(--hue), 100%, 97%);
+  --bg-h1: hsl(var(--hue), 18%, 79%);
+  --white-color: hsl(var(--hue), 0%, 100%);
+  --main-p-color: hsl(var(--hue), 84%, 12%);
+  --main-span-color: hsl(var(--hue), 94%, 49%);
+  --h2-color: hsl(var(--hue), 17%, 35%);
+}
+
+.page{
+ 
+  font-family: var(--ff-texting);
+  font-size: var(--fs-body);
+  margin: 0 auto;
+
+  background: var(--bg-primary);
+}
+
+header{
+  background: var(--bg-header);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.4rem;
+}
+
+header img{
+  width: 16.7rem;
+  margin-top: 3.2rem;
+
+  animation-name: downtop;
+  animation-duration: 2000ms;
+}
+
+header h1{
+  margin-bottom: 2.9rem;
+  margin-top: 3.2rem;
+  width: 100%;
+
+  font-family: var(--ff-heading);
+  letter-spacing: 5px;
+
+  display: flex;
+  justify-content: space-around;
+
+  color: var(--white-color);
+  background: var(--bg-h1);
+
+  animation-name: topdown;
+  animation-duration: 900ms;
+}
+
+main{
+  width: 32.0rem;
+  margin: 0 auto;
+}
+
+main p{
+  text-align: center;
+  font-size: 2rem;
+
+  margin: 0 auto;
+  margin-bottom: 6.3rem;
+
+  color: var(--main-p-color);
+
+  animation-name: leftright;
+  animation-duration: 900ms;
+}
+
+main p span{
+  color: var(--main-span-color);
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+.cards{
+  position: relative;
+}
+
+.cards img{
+  width: 32.0rem;
+  object-fit: cover;
+  margin-bottom: 3.6rem;
+
+  animation-name: downtop;
+  animation-duration: 700ms;
+}
+
+.cards h2{
+  font-family: var(--ff-heading);
+  letter-spacing: 2px;
+  font-size: var(--fs-body);
+  line-height: 3.4rem;
+  font-weight: 400;
+
+  position: absolute;
+  top: 0.6rem;
+  margin-top: 1.6rem;
+  right: 1.6rem;
+  border-radius: 2rem;
+  padding: 0 2.4rem;
+
+  display: inline-flex;
+  align-items: center;
+
+  background-color: var(--white-color);
+  color: var(--h2-color);
+
+  animation-name: topdown;
+  animation-duration: 400ms;
+}
+
+@keyframes topdown{
+  0%{
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop{
+  0%{
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes leftright{
+  0%{
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
